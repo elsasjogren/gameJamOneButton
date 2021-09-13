@@ -23,9 +23,11 @@ public class button : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D col)
     {
-        mySpriteRenderer.sprite = pressDown;
-        if (col.gameObject.CompareTag("Skull"))
+        
+        if (col.gameObject.CompareTag("enemy"))
         {
+            mySpriteRenderer.sprite = pressDown;
+            //huge explosion happens of jam and butter 
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }

@@ -27,16 +27,13 @@ public class Skeleton : MonoBehaviour
         {
            
             mySpriteRenderer.sprite = spriteLeft;
-            //mySpriteRenderer.flipX = true;
-            //// x component is - * speed
-            //movementHorizontal = -speed;
+           
         }
         else if (Input.GetKey(KeyCode.RightArrow))
         {
            
             mySpriteRenderer.sprite = spriteRight;
-            //mySpriteRenderer.flipX = false;
-            //movementHorizontal = speed;
+            
         }
 
             body.velocity = movement;
