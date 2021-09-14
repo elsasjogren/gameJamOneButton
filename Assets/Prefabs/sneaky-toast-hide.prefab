@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1890302836525749142}
   m_Layer: 0
   m_Name: sneaky-toast-hide
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -149,4 +149,4 @@ MonoBehaviour:
   - {fileID: 21300000, guid: b544156aefc46410686336b8cb1fa16a, type: 3}
   - {fileID: 21300000, guid: 7edae1489bb504622904ac185f78b751, type: 3}
   - {fileID: 21300000, guid: 322082f715f4344c18e2350ed879616f, type: 3}
-  speed: 5
+  speed: 2

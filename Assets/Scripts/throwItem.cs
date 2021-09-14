@@ -16,7 +16,9 @@ public class throwItem : MonoBehaviour
                 Vector2 input = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
                 if(input.magnitude == 0)
                 {
-                    input = Vector2.right;
+
+                    //if (position.x ) fix so that will move in direction that skeleton was facing when he threw the object
+                    input = Vector2.left;
                 }
 
                 Skull skull = thing.GetComponent<Skull>();

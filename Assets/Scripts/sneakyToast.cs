@@ -12,17 +12,31 @@ public class sneakyToast : MonoBehaviour
     public Sprite[] walkSprite = new Sprite[5];
     public float speed;
 
+    
+    
 
-    void Start()
+
+void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
         mySpriteRenderer = GetComponent<SpriteRenderer>();
-    }
+        
+}
 
    
     void Update()
     {
         Sprite spriteWalk = walkSprite[Random.Range(0, walkSprite.Length)];
+
+
+        Vector3 input = GameObject.FindWithTag("Button").transform.position - transform.position;
+        
+        Vector3 dir = input.normalized;
+        Vector3 vel = dir * speed * Time.deltaTime;
+
+        transform.Translate(vel);
+
+
         mySpriteRenderer.sprite = spriteWalk;
     }
 
@@ -31,6 +45,9 @@ public class sneakyToast : MonoBehaviour
         if (collision.gameObject.CompareTag("Skull"))
         {
             Destroy(gameObject);
+            Destroy(collision.gameObject);
+            GameObject.Find("skullSpawner").GetComponent<SkullSpawner>().count--;
+            //GameObject.Find("MyObject").GetComponent<MyScript>().MyVariable
 
 
         }
