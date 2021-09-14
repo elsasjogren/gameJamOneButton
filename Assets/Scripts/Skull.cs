@@ -37,6 +37,7 @@ public class Skull : MonoBehaviour
     {
         yield return new WaitForSeconds(2);
         Destroy(gameObject);
+        GameObject.Find("skullSpawner").GetComponent<SkullSpawner>().count--;
     }
 
 
