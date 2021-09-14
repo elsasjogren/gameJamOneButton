@@ -39,7 +39,7 @@ public class button : MonoBehaviour
         mySpriteRenderer.sprite = pressDown;
         yield return new WaitForSeconds(1); //WaitForSeconds is of type IEnumerator
         mySpriteRenderer.sprite = jamExplosion;
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
