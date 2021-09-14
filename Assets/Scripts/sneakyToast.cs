@@ -28,7 +28,7 @@ public class sneakyToast : MonoBehaviour
         //int frameInt =  Math.Ceiling(10 / speed);
         if (frame % 20 == 0)
         {
-
+            
             Sprite spriteWalk = walkSprite[frameIndex];
             mySpriteRenderer.sprite = spriteWalk;
             frameIndex++;
