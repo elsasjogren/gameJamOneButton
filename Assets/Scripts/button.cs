@@ -8,6 +8,7 @@ public class button : MonoBehaviour
 {
     private SpriteRenderer mySpriteRenderer;
     public Sprite pressDown;
+    public Sprite jamExplosion;
 
 
     void Start()
@@ -26,9 +27,21 @@ public class button : MonoBehaviour
         
         if (col.gameObject.CompareTag("enemy"))
         {
-            mySpriteRenderer.sprite = pressDown;
-            //huge explosion happens of jam and butter 
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            StartCoroutine(Wait());
+            // wait is the parameter of the start coroutine function 
         }
     }
+
+
+
+    IEnumerator Wait()
+    {
+        mySpriteRenderer.sprite = pressDown;
+        yield return new WaitForSeconds(3); //WaitForSeconds is of type IEnumerator
+        mySpriteRenderer.sprite = jamExplosion;
+        yield return new WaitForSeconds(4);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+
 }
