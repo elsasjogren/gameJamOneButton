@@ -447,6 +447,7 @@ GameObject:
   m_Component:
   - component: {fileID: 609992929}
   - component: {fileID: 609992930}
+  - component: {fileID: 609992931}
   m_Layer: 5
   m_Name: MainMenu
   m_TagString: Untagged
@@ -505,6 +506,18 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &609992931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 609992928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5775a0373ce634881ab1c1f3312a68c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &983213487
 GameObject:
   m_ObjectHideFlags: 0
@@ -935,7 +948,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1813400181}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 609992931}
+        m_TargetAssemblyTypeName: MainMenuController, Assembly-CSharp
+        m_MethodName: playHardGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1813400181
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1056,7 +1081,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1924006766}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 609992931}
+        m_TargetAssemblyTypeName: MainMenuController, Assembly-CSharp
+        m_MethodName: playEasyGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1924006766
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1177,7 +1214,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1964672412}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 609992931}
+        m_TargetAssemblyTypeName: MainMenuController, Assembly-CSharp
+        m_MethodName: playMediumGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1964672412
 MonoBehaviour:
   m_ObjectHideFlags: 0

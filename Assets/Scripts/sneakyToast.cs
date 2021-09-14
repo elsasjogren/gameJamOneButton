@@ -10,7 +10,9 @@ public class sneakyToast : MonoBehaviour
     private SpriteRenderer mySpriteRenderer;
 
     public Sprite[] walkSprite = new Sprite[5];
-    public float speed;
+    static public float speed;
+    //sneakyToast.speed to access in the main menu 
+    
 
     private int frame = 0;
     private int frameIndex = 0;
