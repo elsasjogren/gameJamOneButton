@@ -42,6 +42,14 @@ public class sneakyToast : MonoBehaviour
         {
             frame = 0;
         }
+
+        Vector3 input = GameObject.FindWithTag("Button").transform.position - transform.position;
+
+        Vector3 dir = input.normalized;
+        Vector3 vel = dir * speed * Time.deltaTime;
+
+        transform.Translate(vel);
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -49,7 +57,9 @@ public class sneakyToast : MonoBehaviour
         if (collision.gameObject.CompareTag("Skull"))
         {
             Destroy(gameObject);
-
+            Destroy(collision.gameObject);
+            GameObject.Find("skullSpawner").GetComponent<SkullSpawner>().count--;
+            //GameObject.Find("MyObject").GetComponent<MyScript>().MyVariable
 
         }
     }
