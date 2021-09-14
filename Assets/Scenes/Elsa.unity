@@ -267,7 +267,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pressDown: {fileID: 21300000, guid: d0ce81b0617b34f6599e7154f8a6f5d9, type: 3}
-  jamExplosion: {fileID: 0}
+  jamExplosion: {fileID: 21300000, guid: 9dc395ddd818042ca95c0c3c0b5187a5, type: 3}
 --- !u!61 &89457921
 BoxCollider2D:
   m_ObjectHideFlags: 0
